@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import downnloadImg from "../../assets/icon-downloads.png";
 import ratingImg from "../../assets/icon-ratings.png";
 import reviewImg from "../../assets/icon-review.png";
+import { ToastContainer, toast } from "react-toastify";
 import Charts from "./Charts";
 const AppDetails = () => {
   const { data } = useLoaderData();
   const { id } = useParams();
+
   //   console.log(data);
 
   const filterID = data.find((eachData) => String(eachData.id) === id);
@@ -21,7 +23,13 @@ const AppDetails = () => {
     title,
     downloads,
   } = filterID;
-
+  const onClickHandle = () => {
+    if (clickState === true) {
+      toast("App is Installed");
+    }
+    setClickState(false);
+  };
+  const [clickState, setClickState] = useState(true);
   return (
     <div>
       <div className="flex flex-col md:flex-row gap-10 items-center md:px-20 text-[20px]">
@@ -53,8 +61,11 @@ const AppDetails = () => {
               <h1 className="text-4xl font-bold">{reviews / 1000}K</h1>
             </div>
           </div>
-          <button className="bg-green-400 text-white px-4 rounded-2xl p-3 mt-2">
-            Install Now ({size} MB)
+          <button
+            onClick={onClickHandle}
+            className="bg-green-400 text-white px-4 rounded-2xl p-3 mt-2"
+          >
+            {clickState ? `Install Now (${size} MB)` : "Installed"}
           </button>
         </div>
       </div>
@@ -71,6 +82,7 @@ const AppDetails = () => {
         <h1 className="text-2xl font-bold">Description</h1>
         <p className="mt-7">{description}</p>
       </div>
+      <ToastContainer />
     </div>
   );
 };
