@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import TrandingAppsSection from "../Home/TrandingAppsSection";
+import SearchHandle from "./SearchHandle";
 
 const Apps = () => {
   const allData = useLoaderData();
+  const [searching, setSearching] = useState("");
+  //   console.log(searching);
+  const dataFilter = allData.data.filter((data) =>
+    data.title.toLowerCase().includes(searching.toLowerCase())
+  );
+  //   console.log(dataFilter.length);
+
   return (
     <div>
       <h1 className=" text-4xl font-bold text-center">
@@ -15,7 +23,9 @@ const Apps = () => {
       </p>
       <div className="flex justify-between items-center">
         <div>
-          <h1>Apps Found</h1>
+          <h1 className="text-xl font-bold">
+            ({dataFilter.length})Apps Found{" "}
+          </h1>
         </div>
         <div>
           <label className="input text-2xl bg-white rounded-2xl p-1">
@@ -35,16 +45,34 @@ const Apps = () => {
                 <path d="m21 21-4.3-4.3"></path>
               </g>
             </svg>
-            <input type="search" required placeholder="search Apps" />
+            <input
+              onChange={(event) => setSearching(event.target.value)}
+              type="search"
+              required
+              placeholder="search Apps"
+            />
           </label>
         </div>
       </div>
 
-      <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-5">
-        {allData?.data?.map((data) => (
+      {searching.length == 0 ? (
+        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-5">
+          {allData?.data?.map((data) => (
+            <TrandingAppsSection
+              key={data.id}
+              data={data}
+            ></TrandingAppsSection>
+          ))}
+        </div>
+      ) : dataFilter.length != 0 ? (
+        dataFilter.map((data) => (
           <TrandingAppsSection key={data.id} data={data}></TrandingAppsSection>
-        ))}
-      </div>
+        ))
+      ) : (
+        <div>
+          <SearchHandle></SearchHandle>
+        </div>
+      )}
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 import downloadImg from "../../assets/icon-downloads.png";
 import ratingImg from "../../assets/icon-ratings.png";
 const TrandingAppsSection = ({ data }) => {
-  console.log(data);
+  //   console.log(data);
 
   const { image, title, downloads, ratingAvg } = data;
 
