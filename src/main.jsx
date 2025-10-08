@@ -6,6 +6,7 @@ import "./index.css";
 import RootLayOut from "./RootLayOut/RootLayOut";
 import Home from "./Pages/Home/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import axios from "axios";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/home",
+        loader: () => axios("/deliverData.json"),
         Component: Home,
       },
     ],
