@@ -1,13 +1,14 @@
 import React from "react";
 import downloadImg from "../../assets/icon-downloads.png";
 import ratingImg from "../../assets/icon-ratings.png";
+import { Link } from "react-router-dom";
 const TrandingAppsSection = ({ data }) => {
   //   console.log(data);
 
-  const { image, title, downloads, ratingAvg } = data;
+  const { id, image, title, downloads, ratingAvg } = data;
 
   return (
-    <div>
+    <Link to={`/apps/${id}`}>
       <div className="card bg-base-100 shadow-2xl rounded-xl">
         <figure>
           <img className="p-4 rounded-3xl" src={image} alt="Brand Photo" />
@@ -27,7 +28,7 @@ const TrandingAppsSection = ({ data }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -8,6 +8,7 @@ import Home from "./Pages/Home/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import axios from "axios";
 import Apps from "./Pages/Apps.jsx/Apps";
+import AppDetails from "./Pages/Apps.jsx/AppDetails";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
         path: "/apps",
         loader: () => axios("/deliverData.json"),
         Component: Apps,
+      },
+      {
+        path: "/apps/:id",
+        loader: () => axios(`/deliverData.json`),
+        Component: AppDetails,
       },
     ],
   },

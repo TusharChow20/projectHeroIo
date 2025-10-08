@@ -21,7 +21,7 @@ const Apps = () => {
       <p className="mt-5 mb-8 opacity-75 text-center">
         Explore All Apps on the Market developed by us. We code for Millions
       </p>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center px-4">
         <div>
           <h1 className="text-xl font-bold">
             ({dataFilter.length})Apps Found{" "}
