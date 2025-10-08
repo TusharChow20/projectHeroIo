@@ -4,7 +4,8 @@ import appstoreImage from "../../assets/app-store-og-removebg-preview.png";
 const BannerHome = () => {
   return (
     <div className="text-center">
-      <h1 className="font-bold text-7xl ">
+      <h1 className="font-bold text-2xl md:text-7xl ">
+        <br /> <br />
         We Build <br />
         <span className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-transparent bg-clip-text">
           Productive
@@ -16,7 +17,7 @@ const BannerHome = () => {
         simpler, smarter, and more exciting. <br /> Our goal is to turn your
         ideas into digital experiences that truly make an impact.
       </p>
-      <div className="flex gap-4 items-center justify-center mt-7">
+      <div className="flex flex-col md:flex-row gap-4 items-center justify-center mt-7">
         <button className="btn border-1 border-amber-50 text-[18px] p-4">
           <img className="h-8 w-10" src={plastoreImg} alt="" />
           Google Play

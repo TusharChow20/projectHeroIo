@@ -45,7 +45,8 @@ const NavBar = () => {
             </ul>
           </div>
           <a className="btn btn-ghost text-xl bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-transparent bg-clip-text">
-            <img className="h-10 w-10" src={logoImg} alt="" /> HERO.IO
+            <img className="h-10 w-10" src={logoImg} alt="" />{" "}
+            <span className="hidden md:flex">HERO.IO</span>
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -59,14 +60,17 @@ const NavBar = () => {
             </li>
 
             <li>
-              <a>Installation</a>
+              <Link to={"https://github.com/TusharChow20"}>Installation</Link>
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white p-5 rounded-xl text-[20px]">
+        <div className="navbar-end ">
+          <Link
+            to={"https://github.com/TusharChow20"}
+            className="btn  bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white p-5 rounded-xl text-[20px]"
+          >
             <FaGithub /> Contribute
-          </a>
+          </Link>
         </div>
       </div>
     </div>
