@@ -44,10 +44,14 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-transparent bg-clip-text">
-            <img className="h-10 w-10" src={logoImg} alt="" />{" "}
+          <Link
+            to={"/"}
+            className="btn btn-ghost text-xl bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-transparent bg-clip-text"
+          >
+            <img className="h-10 w-10" src={logoImg} alt="" />
+
             <span className="hidden md:flex">HERO.IO</span>
-          </a>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-[20px]">

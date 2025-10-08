@@ -7,6 +7,7 @@ import RootLayOut from "./RootLayOut/RootLayOut";
 import Home from "./Pages/Home/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import axios from "axios";
+import Apps from "./Pages/Apps.jsx/Apps";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -14,12 +15,18 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
+        loader: () => axios("/deliverData.json"),
         Component: Home,
       },
       {
         path: "/home",
         loader: () => axios("/deliverData.json"),
         Component: Home,
+      },
+      {
+        path: "/apps",
+        loader: () => axios("/deliverData.json"),
+        Component: Apps,
       },
     ],
   },
