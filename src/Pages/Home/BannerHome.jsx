@@ -1,5 +1,6 @@
 import React from "react";
-
+import plastoreImg from "../../assets/newPlaystoreIcon.png";
+import appstoreImage from "../../assets/app-store-og-removebg-preview.png";
 const BannerHome = () => {
   return (
     <div className="text-center">
@@ -16,10 +17,12 @@ const BannerHome = () => {
         ideas into digital experiences that truly make an impact.
       </p>
       <div className="flex gap-4 items-center justify-center mt-7">
-        <button className="btn border-1 border-amber-50 text-[18px]">
+        <button className="btn border-1 border-amber-50 text-[18px] p-4">
+          <img className="h-8 w-10" src={plastoreImg} alt="" />
           Google Play
         </button>
         <button className="btn border-1 border-amber-50 text-[18px]">
+          <img className="h-10 w-15" src={appstoreImage} alt="" />
           App Store
         </button>
       </div>
