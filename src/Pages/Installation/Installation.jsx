@@ -3,7 +3,8 @@ import downnloadImg from "../../assets/icon-downloads.png";
 import ratingImg from "../../assets/icon-ratings.png";
 import { useLoaderData } from "react-router-dom";
 import { ArrowDownToDot } from "lucide-react";
-
+import imageAppNotFound from "../../assets/App-Error.png";
+import { toast, ToastContainer } from "react-toastify";
 const Installation = () => {
   const [sort, setSort] = useState("");
   const { data } = useLoaderData();
@@ -21,6 +22,7 @@ const Installation = () => {
 
   // ✅ Handle Uninstall button
   const handleDelete = (id) => {
+    toast("App Uninstalled");
     const storedAppsStringForm = localStorage.getItem("installedApps");
     const storedId = storedAppsStringForm
       ? JSON.parse(storedAppsStringForm)
@@ -118,8 +120,12 @@ const Installation = () => {
           </div>
         ))
       ) : (
-        <p>Not Found</p>
+        <div className="flex flex-col items-center  justify-center">
+          <img src={imageAppNotFound} alt="" />
+          <p className="text-3xl">Not Installed</p>
+        </div>
       )}
+      <ToastContainer />
     </div>
   );
 };

@@ -13,7 +13,7 @@ import {
 
 const Charts = ({ ratings }) => {
   const data = ratings;
-  console.log(data);
+  // console.log(data);
 
   return (
     <div style={{ width: "100%", height: 400 }}>
