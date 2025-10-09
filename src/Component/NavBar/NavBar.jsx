@@ -1,10 +1,13 @@
 import { Github } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logoImg from "../../assets/logo.png";
 
 const NavBar = () => {
+  const activeClass =
+    "text-[#632EE3] font-semibold border-b-2 border-[#632EE3]";
+  const defaultClass = "hover:text-[#632EE3] transition-all duration-200";
   return (
     <div>
       <div className="navbar bg-base-100 shadow-sm mt-2">
@@ -56,15 +59,36 @@ const NavBar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-[20px]">
             <li>
-              <Link to={"/home"}>Home</Link>
+              <NavLink
+                to={"/home"}
+                className={({ isActive }) =>
+                  isActive ? activeClass : defaultClass
+                }
+              >
+                Home
+              </NavLink>
             </li>
 
             <li>
-              <Link to={"/apps"}>Apps</Link>
+              <NavLink
+                to={"/apps"}
+                className={({ isActive }) =>
+                  isActive ? activeClass : defaultClass
+                }
+              >
+                Apps
+              </NavLink>
             </li>
 
             <li>
-              <Link to={"/installation"}>Installation</Link>
+              <NavLink
+                to={"/installation"}
+                className={({ isActive }) =>
+                  isActive ? activeClass : defaultClass
+                }
+              >
+                Installation
+              </NavLink>
             </li>
           </ul>
         </div>
