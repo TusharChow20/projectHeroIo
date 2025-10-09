@@ -9,10 +9,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import axios from "axios";
 import Apps from "./Pages/Apps.jsx/Apps";
 import AppDetails from "./Pages/Apps.jsx/AppDetails";
+import PageNotFOund from "./Pages/PageNotFound/PageNotFOund";
+import Loading from "./Component/Loading/Loading";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayOut />,
+    hydrateFallbackElement: <Loading></Loading>,
     children: [
       {
         index: true,
@@ -33,6 +36,10 @@ const router = createBrowserRouter([
         path: "/apps/:id",
         loader: () => axios(`/deliverData.json`),
         Component: AppDetails,
+      },
+      {
+        path: "*",
+        Component: PageNotFOund,
       },
     ],
   },

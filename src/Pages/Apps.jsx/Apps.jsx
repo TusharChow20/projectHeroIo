@@ -2,16 +2,24 @@ import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import TrandingAppsSection from "../Home/TrandingAppsSection";
 import SearchHandle from "./SearchHandle";
+import Loading from "../../Component/Loading/Loading";
 
 const Apps = () => {
   const allData = useLoaderData();
   const [searching, setSearching] = useState("");
+  const [loadder, setLoadder] = useState(false);
   //   console.log(searching);
   const dataFilter = allData.data.filter((data) =>
     data.title.toLowerCase().includes(searching.toLowerCase())
   );
   //   console.log(dataFilter.length);
-
+  const handleClick = (event) => {
+    setLoadder(true);
+    setSearching(event.target.value);
+    requestAnimationFrame(() => {
+      setLoadder(false);
+    });
+  };
   return (
     <div>
       <h1 className=" text-4xl font-bold text-center">
@@ -46,7 +54,7 @@ const Apps = () => {
               </g>
             </svg>
             <input
-              onChange={(event) => setSearching(event.target.value)}
+              onChange={handleClick}
               type="search"
               required
               placeholder="search Apps"
@@ -55,7 +63,11 @@ const Apps = () => {
         </div>
       </div>
 
-      {searching.length == 0 ? (
+      {loadder ? (
+        <div>
+          <Loading></Loading>
+        </div>
+      ) : searching.length == 0 ? (
         <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-5">
           {allData?.data?.map((data) => (
             <TrandingAppsSection
