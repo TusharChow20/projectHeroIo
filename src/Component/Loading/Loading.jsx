@@ -6,7 +6,7 @@ const Loading = () => {
       <h1 className="text-5xl flex">
         L
         <span className="animate-spin">
-          <img className="w-10" src="/logo.png" alt="" />
+          <img className="w-15" src="/logo.png" alt="" />
         </span>
         oading
       </h1>
