@@ -24,8 +24,6 @@
 - [⚙️ Additional Features](#-additional-features)
 - [🧩 Tech Stack](#-tech-stack)
 - [📦 Installation Guide](#-installation-guide)
-- [👨‍💻 Developer](#-developer)
-- [🌐 Live Demo](#-live-demo)
 
 ---
 
@@ -173,7 +171,8 @@ npm run dev
 🧑‍💻 Tushar Chowdhury
 Frontend Developer | React Enthusiast
 
-🌐 Linkedin Profile https://www.linkedin.com/in/tusharchowdhury20211/
+## 🌐 **Linkedin Profile** https://www.linkedin.com/in/tusharchowdhury20211/
+
 💌 “Crafting clean and functional UIs with passion.”
 
 ## 🌐 **Live Demo** https://projecthroio.netlify.app/
