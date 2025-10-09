@@ -12,6 +12,7 @@ import AppDetails from "./Pages/Apps.jsx/AppDetails";
 import PageNotFOund from "./Pages/PageNotFound/PageNotFOund";
 import Loading from "./Component/Loading/Loading";
 import AppNotFound from "./Component/AppNotFOund/AppNotFound";
+import Installation from "./Pages/Installation/Installation";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
       {
         path: "*",
         Component: PageNotFOund,
+      },
+      {
+        path: "/installation",
+        loader: () => axios(`/deliverData.json`),
+        Component: Installation,
       },
     ],
   },

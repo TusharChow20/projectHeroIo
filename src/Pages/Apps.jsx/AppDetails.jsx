@@ -30,7 +30,7 @@ const AppDetails = () => {
       ? JSON.parse(storedAppsStringForm)
       : [];
     if (storedApps.includes(id)) {
-      setClickState(false); // Already installed
+      setClickState(false);
     }
   }, [id]);
   const onClickHandle = () => {

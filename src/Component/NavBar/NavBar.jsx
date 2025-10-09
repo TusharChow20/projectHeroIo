@@ -40,7 +40,7 @@ const NavBar = () => {
               </li>
 
               <li>
-                <a>Installation</a>
+                <Link to={"installation"}>Installation</Link>
               </li>
             </ul>
           </div>
@@ -64,7 +64,7 @@ const NavBar = () => {
             </li>
 
             <li>
-              <Link to={"https://github.com/TusharChow20"}>Installation</Link>
+              <Link to={"/installation"}>Installation</Link>
             </li>
           </ul>
         </div>
