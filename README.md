@@ -161,26 +161,22 @@
 # Clone the repository
 git clone https://github.com/TusharChow20/projectHeroIo.git
 
-# Navigate to project folder
 cd projectHeroIo
 
-# Install dependencies
 npm install
 
-# Start the development server
 npm run dev
 ```
 
-##👨‍💻 **Developer**
+## 👨‍💻 **Developer**
 
 🧑‍💻 Tushar Chowdhury
 Frontend Developer | React Enthusiast
 
-🌐 GitHub Profile (https://github.com/TusharChow20)
-
+🌐 Linkedin Profile https://www.linkedin.com/in/tusharchowdhury20211/
 💌 “Crafting clean and functional UIs with passion.”
 
-🌐 Live Demo ((https://projecthroio.netlify.app/))
+## 🌐 **Live Demo** https://projecthroio.netlify.app/
 
 <div align="center">
 
