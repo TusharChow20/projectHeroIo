@@ -21,9 +21,8 @@
 - [📱 All Apps Page](#-all-apps-page)
 - [📊 App Details Page](#-app-details-page)
 - [💾 My Installation Page](#-my-installation-page)
-- [⚙️ Additional Features](#️-additional-features)
+- [⚙️ Additional Features](#-additional-features)
 - [🧩 Tech Stack](#-tech-stack)
-- [📂 Data Structure](#-data-structure)
 - [📦 Installation Guide](#-installation-guide)
 - [👨‍💻 Developer](#-developer)
 - [🌐 Live Demo](#-live-demo)
@@ -32,7 +31,7 @@
 
 ## ✨ **Features Overview**
 
-> **HERO.IO** is a full-featured responsive React app store where users can explore, install, and manage apps using localStorage and dynamic routing — all wrapped in a modern and responsive UI.
+> **HERO.IO** is a full-featured responsive React app store where users can explore, install, and manage apps using `localStorage` and dynamic routing — all wrapped in a modern and responsive UI.
 
 ---
 
@@ -56,16 +55,16 @@
 
 ## 🏠 **Home Page**
 
-✅ **Banner Section**
+### ✅ Banner Section
 
 - Center-aligned heading & text.
 - “App Store” and “Play Store” buttons redirect to official pages.
 
-✅ **Stats Section**
+### ✅ Stats Section
 
 - Displays key metrics using state cards.
 
-✅ **Top Apps Section**
+### ✅ Top Apps Section
 
 - Displays **8 trending apps** (4-column grid).
 - Each card shows: image, title, downloads, and average rating.
@@ -76,40 +75,58 @@
 ## 📱 **All Apps Page**
 
 - **Title Section** with heading & subtitle (Figma inspired).
-- **Search Feature**
-  - Live search as user types.
-  - Case-insensitive.
-  - Displays _“No App Found”_ if none match.
-- **Sorting Dropdown**
-  - 🔼 _Low → High_
-  - 🔽 _High → Low_
-- **Dynamic App Grid**
-  - Each card links to **App Details Page**.
+
+### 🔍 Search Feature
+
+- Live search as user types.
+- Case-insensitive.
+- Displays _“No App Found”_ if none match.
+
+### 🧭 Sorting Dropdown
+
+- 🔼 Low → High
+- 🔽 High → Low
+
+### 📱 Dynamic App Grid
+
+- Each card links to **App Details Page**.
 
 ---
 
 ## 📊 **App Details Page**
 
 - App image, title, rating, downloads, and reviews displayed clearly.
-- **Install Button Logic:**
-  - On click → text changes to `Installed`, disables the button.
-  - Saved in `localStorage`.
-  - Success toast appears.
-- **If already installed:**
-  - Shows “Installed” from the start.
-- **Review Chart:**
-  - Interactive Recharts visualization.
-- **App Description:**
-  - Clean section for details.
+
+### 🧠 Install Button Logic
+
+- On click → text changes to `Installed`, disables the button.
+- Saved in `localStorage`.
+- Success toast appears.
+
+- **If already installed:** shows “Installed” from the start.
+
+### 📈 Review Chart
+
+- Interactive **Recharts** visualization.
+
+### 📝 App Description
+
+- Clean section for details.
 
 ---
 
 ## 💾 **My Installation Page**
 
 - Displays apps installed via `localStorage`.
-- **Uninstall Button:** removes app instantly from both UI and localStorage.
-- **Toast Notifications:** shows confirmation message.
-- **Sort Dropdown:** High–Low and Low–High by downloads.
+
+### 🧹 Uninstall Button
+
+- Removes app instantly from both UI and localStorage.
+- **Toast Notifications** show confirmation message.
+
+### 🧭 Sort Dropdown
+
+- High–Low and Low–High by downloads.
 
 ---
 
@@ -138,43 +155,21 @@
 
 ---
 
-## 📂 **Data Structure Example**
+## 📦 **Installation Guide**
 
-```json
-{
-  "id": 1,
-  "image": "https://example.com/app.png",
-  "title": "TaskFlow Pro",
-  "companyName": "Skybase Technologies",
-  "description": "A productivity app designed to enhance your workflow and manage projects efficiently.",
-  "size": 35,
-  "reviews": 240,
-  "ratingAvg": 4.6,
-  "downloads": 125000,
-  "ratings": [
-    { "name": "1 star", "count": 20 },
-    { "name": "2 star", "count": 15 },
-    { "name": "3 star", "count": 35 },
-    { "name": "4 star", "count": 60 },
-    { "name": "5 star", "count": 110 }
-  ]
-}
-
-📦 Installation Guide
-
+```bash
 # Clone the repository
-
 git clone https://github.com/TusharChow20/projectHeroIo.git
 
 # Navigate to project folder
-
 cd projectHeroIo
 
 # Install dependencies
-
 npm install
 
 # Start the development server
+npm run dev
+```
 
 👨‍💻 Developer
 
@@ -184,15 +179,15 @@ Frontend Developer | React Enthusiast
 🌐 GitHub Profile
 
 💌 “Crafting clean and functional UIs with passion.”
+
 🌐 Live Demo
 
 🔗 View HERO.IO Live
 
 <div align="center">
+
 ⭐ If you like this project, give it a star on GitHub!
 
 Made with ❤️ by Tushar Chowdhury
 
-</div>
-
-```
+</div> ```
