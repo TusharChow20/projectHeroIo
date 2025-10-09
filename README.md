@@ -140,7 +140,7 @@
 
 ## 📂 **Data Structure Example**
 
-````json
+```json
 {
   "id": 1,
   "image": "https://example.com/app.png",
@@ -159,7 +159,6 @@
     { "name": "5 star", "count": 110 }
   ]
 }
-```
 
 📦 Installation Guide
 
@@ -194,5 +193,6 @@ Frontend Developer | React Enthusiast
 
 Made with ❤️ by Tushar Chowdhury
 
-</div> ```
-````
+</div>
+
+```
