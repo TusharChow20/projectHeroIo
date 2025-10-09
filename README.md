@@ -7,8 +7,7 @@
 ![React](https://img.shields.io/badge/React-18.0-blue?logo=react)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.0-38B2AC?logo=tailwindcss)
 ![Recharts](https://img.shields.io/badge/Recharts-Responsive%20Charts-orange?logo=recharts)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Netlify](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)
+![Netlify](https://img.shields.io/badge/Deployed%20on-Netlify-blue?logo=netlify)
 
 </div>
 
@@ -25,7 +24,6 @@
 - [⚙️ Additional Features](#️-additional-features)
 - [🧩 Tech Stack](#-tech-stack)
 - [📂 Data Structure](#-data-structure)
-- [📸 Screenshots](#-screenshots)
 - [📦 Installation Guide](#-installation-guide)
 - [👨‍💻 Developer](#-developer)
 - [🌐 Live Demo](#-live-demo)
@@ -34,7 +32,7 @@
 
 ## ✨ **Features Overview**
 
-> A full-featured responsive React app store where users can explore, install, and manage apps using localStorage and dynamic routing — all wrapped in a modern UI.
+> **HERO.IO** is a full-featured responsive React app store where users can explore, install, and manage apps using localStorage and dynamic routing — all wrapped in a modern and responsive UI.
 
 ---
 
@@ -142,7 +140,7 @@
 
 ## 📂 **Data Structure Example**
 
-```json
+````json
 {
   "id": 1,
   "image": "https://example.com/app.png",
@@ -163,7 +161,7 @@
 }
 ```
 
-## 📂 **Installation Guide**
+📦 Installation Guide
 
 # Clone the repository
 
@@ -179,4 +177,22 @@ npm install
 
 # Start the development server
 
-npm run dev
+👨‍💻 Developer
+
+🧑‍💻 Tushar Chowdhury
+Frontend Developer | React Enthusiast
+
+🌐 GitHub Profile
+
+💌 “Crafting clean and functional UIs with passion.”
+🌐 Live Demo
+
+🔗 View HERO.IO Live
+
+<div align="center">
+⭐ If you like this project, give it a star on GitHub!
+
+Made with ❤️ by Tushar Chowdhury
+
+</div> ```
+````
