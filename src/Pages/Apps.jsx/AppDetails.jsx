@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import downnloadImg from "../../assets/icon-downloads.png";
 import ratingImg from "../../assets/icon-ratings.png";
 import reviewImg from "../../assets/icon-review.png";
 import { ToastContainer, toast } from "react-toastify";
 import Charts from "./Charts";
+import { addApps } from "../Utilities/utilities";
 const AppDetails = () => {
   const { data } = useLoaderData();
   const { id } = useParams();
@@ -23,10 +24,20 @@ const AppDetails = () => {
     title,
     downloads,
   } = filterID;
+  useEffect(() => {
+    const storedAppsStringForm = localStorage.getItem("installedApps");
+    const storedApps = storedAppsStringForm
+      ? JSON.parse(storedAppsStringForm)
+      : [];
+    if (storedApps.includes(id)) {
+      setClickState(false); // Already installed
+    }
+  }, [id]);
   const onClickHandle = () => {
     if (clickState === true) {
       toast("App is Installed");
     }
+    addApps(id);
     setClickState(false);
   };
   const [clickState, setClickState] = useState(true);

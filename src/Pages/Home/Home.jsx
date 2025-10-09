@@ -3,6 +3,7 @@ import BannerHome from "./BannerHome";
 import HeroSection from "./HeroSection";
 import { Link, useLoaderData } from "react-router-dom";
 import TrandingAppsSection from "./TrandingAppsSection";
+import { ToastContainer } from "react-toastify";
 
 const Home = () => {
   const allData = useLoaderData();
@@ -34,6 +35,7 @@ const Home = () => {
           </Link>
         </div>
       }
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
