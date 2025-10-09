@@ -23,7 +23,9 @@ const Apps = () => {
   return (
     <div>
       <h1 className=" text-4xl font-bold text-center">
-        <br /> <br />
+        <span className="hidden md:block">
+          <br /> <br />
+        </span>
         Our All Applications
       </h1>
       <p className="mt-5 mb-8 opacity-75 text-center">

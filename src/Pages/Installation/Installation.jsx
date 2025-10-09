@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import downnloadImg from "../../assets/icon-downloads.png";
 import ratingImg from "../../assets/icon-ratings.png";
 import { useLoaderData } from "react-router-dom";
+import { ArrowDownToDot } from "lucide-react";
 
 const Installation = () => {
+  const [sort, setSort] = useState("");
   const { data } = useLoaderData();
   const [apps, setApps] = useState([]);
 
@@ -35,24 +37,59 @@ const Installation = () => {
       prevApps.filter((app) => String(app.id) !== String(id))
     );
   };
+  const handleSorting = (type) => {
+    setSort(type);
+    if (type === "Low-High") {
+      const sortedApp = [...apps].sort((a, b) => a.downloads - b.downloads);
+      setApps(sortedApp);
+      // console.log(sortedApp);
+    } else {
+      const sortedApp = [...apps].sort((a, b) => b.downloads - a.downloads);
+      setApps(sortedApp);
+    }
+  };
 
   return (
     <div className="text-center">
-      <h1 className="text-5xl font-bold">Your Installed Apps</h1>
+      <h1 className="md:text-5xl font-bold">Your Installed Apps</h1>
       <p className="text-xl opacity-70 mt-5">
         Explore All Trending Apps on the Market developed by us
       </p>
 
-      <div>
-        <p>{apps.length} Apps Found</p>
+      <div className="mt-10 mb-[-15px] text-start px-10 flex justify-between items-center">
+        <p className="text-2xl font-semibold">{apps.length} Apps Found</p>
+        {/* change popover-1 and --anchor-1 names. Use unique names for each dropdown */}
+        {/* For TSX uncomment the commented types below */}
+        <button
+          className="btn m-1 border-0 bg-white"
+          popoverTarget="popover-1"
+          style={{ anchorName: "--anchor-1" } /* as React.CSSProperties */}
+        >
+          {sort ? sort : "Sort By Size"}
+          <ArrowDownToDot />
+        </button>
+
+        <ul
+          className="dropdown menu w-52 rounded-box bg-white shadow-sm"
+          popover="auto"
+          id="popover-1"
+          style={{ positionAnchor: "--anchor-1" } /* as React.CSSProperties */}
+        >
+          <li>
+            <a onClick={() => handleSorting("Low-High")}>Low-High</a>
+          </li>
+          <li>
+            <a onClick={() => handleSorting("High-Low")}>High-Low</a>
+          </li>
+        </ul>
       </div>
 
       {apps.length > 0 ? (
         apps.map((app) => (
           <div key={app.id} className="px-10 rounded-2xl">
-            <div className="flex justify-between items-center space-y-7 p-5 bg-white mt-10">
-              <div className="flex justify-center gap-5 items-center">
-                <img className="w-15" src={app.image} alt={app.title} />
+            <div className="md:flex justify-between items-center space-y-7 p-5 bg-white mt-10">
+              <div className="md:flex justify-center gap-5 items-center">
+                <img className="w-15 mx-auto" src={app.image} alt={app.title} />
                 <div>
                   <h1 className="text-2xl font-bold">{app.title}</h1>
                   <div className="flex gap-4">
