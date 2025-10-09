@@ -171,18 +171,16 @@ npm install
 npm run dev
 ```
 
-👨‍💻 Developer
+##👨‍💻 **Developer**
 
 🧑‍💻 Tushar Chowdhury
 Frontend Developer | React Enthusiast
 
-🌐 GitHub Profile
+🌐 GitHub Profile (https://github.com/TusharChow20)
 
 💌 “Crafting clean and functional UIs with passion.”
 
-🌐 Live Demo
-
-🔗 View HERO.IO Live
+🌐 Live Demo ((https://projecthroio.netlify.app/))
 
 <div align="center">
 
@@ -190,4 +188,4 @@ Frontend Developer | React Enthusiast
 
 Made with ❤️ by Tushar Chowdhury
 
-</div> ```
+</div>
