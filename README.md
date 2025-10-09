@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 **AppHub**
+# 🚀 **HERO.IO**
 
 ### _Discover. Install. Experience — All in one hub!_
 
@@ -8,7 +8,7 @@
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.0-38B2AC?logo=tailwindcss)
 ![Recharts](https://img.shields.io/badge/Recharts-Responsive%20Charts-orange?logo=recharts)
 ![License](https://img.shields.io/badge/License-MIT-green)
-![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)
+![Netlify](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)
 
 </div>
 
@@ -52,7 +52,7 @@
 
 ### 📊 Data Structure
 
-- Built from a JSON array of **12–20 app objects** containing image, title, description, stats, and rating distribution.
+- Built from a JSON array of **16 app objects** containing image, title, description, stats, and rating distribution.
 
 ---
 
@@ -163,7 +163,7 @@
 }
 ```
 
-## 📂 **Data Structure Example**
+## 📂 **Installation Guide**
 
 # Clone the repository
 

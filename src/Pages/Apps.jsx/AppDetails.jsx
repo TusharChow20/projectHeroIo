@@ -91,7 +91,7 @@ const AppDetails = () => {
 
       <div className="mt-10 px-2 md:px-10">
         <h1 className="text-2xl font-bold">Description</h1>
-        <p className="mt-7">{description}</p>
+        <p className="mt-7 md:text-3xl md:p-10">{description}</p>
       </div>
       <ToastContainer />
     </div>

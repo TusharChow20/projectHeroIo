@@ -5,7 +5,7 @@ import appnotfoundImg from "../../assets/App-Error.png";
 
 const SearchHandle = () => {
   return (
-    <div className="flex flex-col justify-center items-center md:h-[calc(100vh-580px)] ">
+    <div className="flex flex-col justify-center items-center md:h-[calc(100vh-416px)] ">
       <img src={appnotfoundImg} alt="App Not Found" />
       <h1 className="md:text-6xl font-bold text-gray-500">No Apps Found</h1>
       <Link to="/apps" reloadDocument>

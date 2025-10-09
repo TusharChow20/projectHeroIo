@@ -16,7 +16,7 @@ const RootLayOut = () => {
       {navigation?.state === "loading" ? (
         <Loading></Loading>
       ) : (
-        <main className="min-h-[calc(100vh-275px)] bg-[#6273821A]">
+        <main className="min-h-[calc(100vh-416px)] bg-[#6273821A]">
           <Outlet></Outlet>
         </main>
       )}
